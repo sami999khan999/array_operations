@@ -1,5 +1,25 @@
 "use strict";
 
+// slice method -
+
+// splice method -
+
+// reverse method -
+
+// concat method -
+
+// join method -
+
+// at method -
+
+// forEach method -
+
+// forEach method in sets and maps -
+
+// map method -
+
+// filter method -
+
 //============================================================================================================================================//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //============================================================================================================================================//
@@ -143,4 +163,82 @@
 
 //============================================================================================================================================//
 
-const currencies = new Map([["BTD"]]);
+// // forEach method in maps
+
+// const currencies = new Map([
+//   ["BTD", "Bangladesh Taka"],
+//   ["USD", "United States Dolar"],
+//   ["EUR", "Euro"],
+// ]);
+
+// currencies.forEach(function (val, key, map) {
+//   console.log(`${key}: ${val}`);
+// });
+
+//============================================================================================================================================//
+
+// // forEach method in sets
+
+// const forSet = new Set([243, 653, 744, 242, 131, 754, 913]);
+
+// forSet.forEach(function (element, index, set) {
+//   console.log(element, index, set);
+// });
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // map method
+
+// // The map method in JavaScript is used to create a new array by applying a given function to each element of an existing array. It iterates over the array, executes the provided function for each element, and returns a new array with the results. //
+
+//============================================================================================================================================//
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const multiArr = arr.map((val, i, arr) => {
+//   return val * 2;
+// });
+
+// console.log(multiArr)
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const furtherTransactions = transactions.map((transaction, i, arr) => {
+//   return transaction - 100;
+// });
+
+// console.log(furtherTransactions);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // filter method
+
+// // The filter method in JavaScript is used to create a new array with all the elements that pass a certain condition. It iterates over the elements of an array, applies a provided function to each element, and includes the elements in the new array if the function returns true. //
+
+//============================================================================================================================================//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const furtherTransactions = transactions.filter((transaction, i, arr) => {
+//   if (transaction > 0) {
+//     return transaction;
+//   }
+// });
+
+// console.log(furtherTransactions);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const num = [24,63,83,13,22,63,34]
+
+// const evenNum = num.filter((number,i,arr)=>number % 2 === 0)
+// console.log(evenNum)
+
+// const oddNum = num.filter((number,i,arr)=> number%2!==0)
+// console.log(oddNum)
