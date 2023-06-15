@@ -20,6 +20,26 @@
 
 // filter method -
 
+// reduce method -
+
+// date transformation pipeline -
+
+// find method -
+
+// some and every method {
+// some emthod -
+// every method -
+// }
+
+// flat and flatMap {
+// flat method -
+// flatMap method -
+// }
+
+// sort method {
+// custom sorting function -
+// }
+
 //============================================================================================================================================//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //============================================================================================================================================//
@@ -269,7 +289,7 @@
 
 // // The reduce() method in JavaScript is used to iterate over an array and accumulate a single value based on the elements of the array. It applies a callback function to each element of the array, resulting in a single output value. //
 
-//--------------------------------------------------------------------------------------------------------------------------------------------//
+//============================================================================================================================================//
 
 // const num = [1, 2, 3, 4, 5];
 
@@ -280,3 +300,231 @@
 // }, 0);
 
 // console.log(sum);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const num = [1, 2, 3, 4, 5];
+
+// const mul = num.reduce((acc, ele) => acc * ele, 1);
+
+// console.log(mul);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const num = [23, 63, 13, 86, 34, 95, 24, 66];
+
+// const maxNum = num.reduce((acc, ele) => (acc > ele ? acc : ele));
+
+// console.log(maxNum);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const num = [23, 63, 13, 86, 34, 95, 24, 66];
+
+// const minimum = num.reduce((acc, ele) => (acc < ele ? acc : ele));
+
+// console.log(minimum);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // date transformation pipeline
+
+// // A data transformation pipeline is a series of operations or functions applied to data in a sequential manner to transform it into a desired format or structure. It is a common pattern used in data processing, data analysis, and data engineering workflows. //
+
+//============================================================================================================================================//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const totalDeposit = transactions
+//   .filter((money) => money > 0)
+//   .map((deposit) => deposit * 1.2)
+//   .reduce((acc, deposit) => acc + deposit);
+
+// console.log(totalDeposit);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const bankRober = [25000, 40000, 15000, 7500, 35000, 5000];
+
+// const totalMoneyRobed = bankRober
+//   .filter((money) => money >= 10000)
+//   .map((money) => money / 2)
+//   .filter((money) => money >= 10000)
+//   .reduce((acc, money) => acc + money);
+
+// console.log(totalMoneyRobed);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // find method
+
+// // In JavaScript, the find() method is used to retrieve the first element in an array that satisfies a specified condition. It iterates through the array and returns the first element for which the provided callback function returns a truthy value. If no such element is found, undefined is returned. //
+
+//============================================================================================================================================//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const firstWiihdroawl = transactions.find(money => money <0)
+
+// console.log(firstWiihdroawl);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const students = [
+//   { id: 1, name: "Sanji", age: 25 },
+//   { id: 2, name: "Usap", age: 30 },
+//   { id: 4, name: "Nami", age: 35 },
+//   { id: 5, name: "Luffy", age: 32 },
+//   { id: 6, name: "Zoro", age: 27 },
+// ];
+
+// const id4 = students.find((student) => student.id === 4);
+// const nameWithL = students.find((student) => student.name.startsWith("L"));
+
+// console.log(id4);
+// console.log(nameWithL);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // some and every method
+
+// // In JavaScript, the some() and every() methods are array methods that allow you to check if elements in an array meet specific conditions.
+
+//============================================================================================================================================//
+
+// // some method
+
+// // The some() method tests whether at least one element in the array satisfies a provided condition. It returns a Boolean value (true or false). //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const some = transactions.some((money) => money > 0);
+
+// console.log(some);
+
+//============================================================================================================================================//
+
+// // every() method:
+
+// // The every() method tests whether all elements in the array satisfy a provided condition. It returns a Boolean value (true or false). //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const transactions = [100, 480, 400, -500, 200, -100];
+
+// const every = transactions.every((money) => money > 0);
+
+// console.log(every);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // flat and flatMap
+
+// // In JavaScript, the flat() and flatMap() methods are array methods introduced in ECMAScript 2019 (ES10) that facilitate working with nested arrays and performing transformations on array elements. flat() and flatMap() methods return a new array and do not modify the original array. //
+
+//============================================================================================================================================//
+
+// // flat method
+
+// // The flat() method creates a new array by flattening a nested array to a specified depth. It effectively concatenates all nested arrays into a single array. An integer that specifies the depth of flattening. By default, depth is 1. //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const arr = [100, 480, 400, [-500, 200, 450], -100];
+
+// console.log(transactions.flat());
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const arr = [100, 480, 400, [[-500, [200]], 450], -100];
+
+// console.log(arr.flat(2))
+// console.log(arr.flat(3))
+
+//============================================================================================================================================//
+
+// // flatMap() method
+
+// // The flatMap() method combines the functionalities of map() and flat() in a single method. It first maps each element of the array using a mapping function, and then flattens the result into a new array. //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const accounts = [
+//   { owner: "Luffi", transactions: [1000, 480, 400, -5000, 200, -1000] },
+//   { owner: "Zoro", transactions: [100, 4880, 4000, -500, 2000, -100] },
+//   { owner: "Nami", transactions: [100, 480, 400, -500, 200, -100] },
+//   { owner: "Usap", transactions: [100, 480, 4000, -500, 200, -10000] },
+//   { owner: "Sanji", transactions: [100, 40880, 4000, -50000, 200, -100] },
+// ];
+
+// const flatTransactions = accounts.flatMap((account) => account.transactions);
+// // flatMap only works in level 1 //
+// console.log(flatTransactions);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// //  sort method
+
+// // In JavaScript, the sort() method is an array method that allows you to sort the elements of an array in place. By default, the sort() method sorts elements alphabetically as strings. However, it can also be used to sort elements in other ways by providing a custom sorting function. //
+
+//============================================================================================================================================//
+
+// const frouts = ["orange", "pineapple", "mango", "apple", "banana"];
+
+// console.log(frouts.sort());
+// // sort method sorted this arr in alphabatiacal order. //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const numArr = [2, 5, 7, 1, 8, 3, 9, 4, 6];
+
+// console.log(numArr.sort());
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const numArr = [21, 555, 73, 612, 12, 874, 323, 80, 42];
+
+// console.log(numArr.sort());
+// // sort method converts the numbers that we got from the array into string and then use slice mehtod to get the first number and sort according to tha value of that number. //
+
+//============================================================================================================================================//
+
+// // custom sorting function
+
+// // A custom compare function takes two arguments, typically referred to as a and b, representing two elements being compared. The function should return a negative value if a should be sorted before b, a positive value if a should be sorted after b, or 0 if the elements are considered equal. //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// // ascending
+
+// const numArr = [21, 555, 73, 612, 12, 874, 323, 80, 42];
+
+// const sortArr = numArr.sort(function (a, b) {
+//   return a > b ? 1 : -1; // (a > b ? 1 : -1) or (a-b)
+// });
+
+// console.log(sortArr);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// // descinding
+
+// const numArr = [21, 555, 73, 612, 12, 874, 323, 80, 42];
+
+// const sortArr = numArr.sort(function (a, b) {
+//   return a > b ? -1 : 1; // (a > b ? -1 : 1) or (b-a)
+// });
+
+// console.log(sortArr);
