@@ -132,7 +132,7 @@
 //============================================================================================================================================//
 
 // const arr = [243, 653, 744, 242, 131, 754, 913];
-// // forEach method takes a callback function and that function has three parameater, the first in element, the second in index and the last one is the array inself. //
+// // forEach method takes a callback function and that function has three parameater, the first is element, the second is index and the last one is the array. //
 // arr.forEach(function (element, index, array) {
 //   console.log(element, index);
 // });
@@ -201,7 +201,7 @@
 //   return val * 2;
 // });
 
-// console.log(multiArr)
+// console.log(multiArr);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -212,6 +212,24 @@
 // });
 
 // console.log(furtherTransactions);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const colors = [
+//   "black",
+//   "white",
+//   "pink",
+//   "brown",
+//   "orange",
+//   "yellow",
+//   "purple",
+// ];
+
+// const colorsUperCase = colors.map(
+//   (color) => color[0].toUpperCase() + color.slice(1)
+// );
+
+// console.log(colorsUperCase);
 
 //============================================================================================================================================//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,10 +253,30 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------//
 
-// const num = [24,63,83,13,22,63,34]
+// const num = [24, 63, 83, 13, 22, 63, 34];
 
-// const evenNum = num.filter((number,i,arr)=>number % 2 === 0)
-// console.log(evenNum)
+// const evenNum = num.filter((number, i, arr) => number % 2 === 0);
+// console.log(evenNum);
 
-// const oddNum = num.filter((number,i,arr)=> number%2!==0)
-// console.log(oddNum)
+// const oddNum = num.filter((number, i, arr) => number % 2 !== 0);
+// console.log(oddNum);
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // reduce method
+
+// // The reduce() method in JavaScript is used to iterate over an array and accumulate a single value based on the elements of the array. It applies a callback function to each element of the array, resulting in a single output value. //
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const num = [1, 2, 3, 4, 5];
+
+// const sum = num.reduce(function (acc, ele, i, arr) {
+//   // The callback function takes four parameters: accumulator, currentValue, currentIndex, and array. //
+//   return (acc += ele);
+//   // The initialValue is optional. Is not provided, the first element of the array is used as the initial value. //
+// }, 0);
+
+// console.log(sum);
