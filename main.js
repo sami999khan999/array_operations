@@ -56,7 +56,7 @@
 // console.log(arr.slice(2));
 // console.log(arr.slice(2, 4));
 // console.log(arr.slice(2, -1)); // -1 is the last element. //
-// console.log(arr.slice()); // slice method without parateater creats the new array. Any changes to the newly created array will net effect the origenal array. //
+// console.log(arr.slice()); // slice method without parateater creats a new array. Any changes to the newly created array will net effect the origenal array. //
 // console.log(arr.slice(-1)); // -1 in slice method will provides the last element. //
 // console.log(arr[arr.length - 1]); // provides the last valuse. //
 // console.log(arr.at()); // at method without parameater will proveder the first value. //
@@ -368,7 +368,7 @@
 
 // const transactions = [100, 480, 400, -500, 200, -100];
 
-// const firstWiihdroawl = transactions.find(money => money <0)
+// const firstWiihdroawl = transactions.find((money) => money < 0);
 
 // console.log(firstWiihdroawl);
 
@@ -394,7 +394,7 @@
 
 // // some and every method
 
-// // In JavaScript, the some() and every() methods are array methods that allow you to check if elements in an array meet specific conditions.
+// // In JavaScript, the some() and every() methods are array methods that allow you to check if elements in an array meet specific conditions. //
 
 //============================================================================================================================================//
 
@@ -412,7 +412,7 @@
 
 //============================================================================================================================================//
 
-// // every() method:
+// // every method
 
 // // The every() method tests whether all elements in the array satisfy a provided condition. It returns a Boolean value (true or false). //
 
